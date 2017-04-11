@@ -1,8 +1,8 @@
-﻿namespace InjectionUsingHarmony
+﻿namespace Harmony.Samples.InjectionUsingHarmony
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
         }
     }

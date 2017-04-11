@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7BAE23D0-C8CB-45B6-AE7E-E57B11A4F2DB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>InjectionUsingHarmony</RootNamespace>
-    <AssemblyName>InjectionUsingHarmony</AssemblyName>
+    <RootNamespace>Harmony.Samples.InjectionUsingHarmony</RootNamespace>
+    <AssemblyName>Harmony.Samples.InjectionUsingHarmony</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
