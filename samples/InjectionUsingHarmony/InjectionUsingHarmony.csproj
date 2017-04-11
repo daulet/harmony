@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Harmony.Samples.InjectionUsingHarmony</RootNamespace>
     <AssemblyName>Harmony.Samples.InjectionUsingHarmony</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -37,7 +37,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DripCoffeeModule.cs" />
+    <Compile Include="ElectricHeater.cs" />
+    <Compile Include="IHeater.cs" />
+    <Compile Include="IPump.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Thermosiphon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
