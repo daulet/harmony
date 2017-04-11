@@ -2,6 +2,6 @@
 {
     public interface IPump
     {
-        
+        void Pump();
     }
 }

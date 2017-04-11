@@ -1,4 +1,6 @@
-﻿namespace Harmony.Samples.InjectionUsingHarmony
+﻿using System;
+
+namespace Harmony.Samples.InjectionUsingHarmony
 {
     public class Thermosiphon : IPump
     {
@@ -8,6 +10,14 @@
         public Thermosiphon(IHeater heater)
         {
             _heater = heater;
+        }
+
+        public void Pump()
+        {
+            if (_heater.IsHot())
+            {
+                Console.WriteLine("=> => pumping => =>");
+            }
         }
     }
 }

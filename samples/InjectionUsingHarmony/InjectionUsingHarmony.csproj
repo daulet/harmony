@@ -37,11 +37,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoffeeMaker.cs" />
     <Compile Include="DripCoffeeModule.cs" />
     <Compile Include="ElectricHeater.cs" />
+    <Compile Include="ICoffeeShop.cs" />
     <Compile Include="IHeater.cs" />
     <Compile Include="IPump.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CoffeeApp.cs" />
     <Compile Include="Thermosiphon.cs" />
   </ItemGroup>
   <ItemGroup>
