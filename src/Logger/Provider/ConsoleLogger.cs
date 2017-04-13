@@ -6,27 +6,25 @@ namespace Logger.Provider
     {
         public void Error(string message)
         {
-            WriteWithForeground(message, ConsoleColor.Red);
+            WriteLine(message, ConsoleColor.Red);
         }
 
         public void Info(string message)
         {
-            Console.WriteLine(message);
+            WriteLine(message, Console.ForegroundColor);
         }
 
         public void Verbose(string message)
         {
-#if DEBUG
-            WriteWithForeground(message, ConsoleColor.DarkGray);
-#endif
+            WriteLine(message, ConsoleColor.DarkGray);
         }
 
         public void Warning(string message)
         {
-            WriteWithForeground(message, ConsoleColor.Yellow);
+            WriteLine(message, ConsoleColor.Yellow);
         }
 
-        private static void WriteWithForeground(string message, ConsoleColor foregroundColor)
+        private static void WriteLine(string message, ConsoleColor foregroundColor)
         {
             var currentColor = Console.ForegroundColor;
 

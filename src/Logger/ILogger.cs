@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Logger
+﻿namespace Logger
 {
     public interface ILogger
     {
