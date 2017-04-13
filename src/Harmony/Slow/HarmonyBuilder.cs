@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
 using Castle.DynamicProxy;
 using Harmony.Core;
@@ -44,7 +43,7 @@ namespace Harmony.Slow
 
         public TComponent Build()
         {
-            IInterceptor interceptor = new HarmonyEmulator<TComponent>(_logger, _provider);
+            IInterceptor interceptor = new HarmonyEmulator(_logger, _provider);
             return _proxyGenerator.CreateInterfaceProxyWithoutTarget<TComponent>(interceptor);
         }
     }

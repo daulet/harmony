@@ -1,12 +1,10 @@
-﻿using System;
-using Castle.DynamicProxy;
+﻿using Castle.DynamicProxy;
 using Harmony.Core;
 using Logger;
 
 namespace Harmony.Slow
 {
-    internal class HarmonyEmulator<TComponent> : IInterceptor
-        where TComponent : class
+    internal class HarmonyEmulator : IInterceptor
     {
         private readonly ILogger _logger;
         private readonly InstanceProvider _provider;
