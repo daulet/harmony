@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using Castle.DynamicProxy;
 using Harmony.Core;
@@ -25,7 +26,9 @@ namespace Harmony.Slow
         public HarmonyBuilder<TComponent, TModule> AddModule(TModule module)
         {
             var moduleType = typeof(TModule);
-            foreach (var providerMethod in moduleType.GetMethods(BindingFlags.Instance | BindingFlags.Public))
+            foreach (var providerMethod in moduleType
+                .GetMethods(BindingFlags.Instance | BindingFlags.Public)
+                .Where(x => x.GetCustomAttribute<ProvidesAttribute>() != null))
             {
                 if (providerMethod.ReturnType == typeof(void))
                 {
