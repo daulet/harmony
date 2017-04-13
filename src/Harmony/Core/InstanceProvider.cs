@@ -31,7 +31,15 @@ namespace Harmony.Core
                 return method.Invoke(providerInstance, parameters.ToArray());
             };
 
-            _logger.Verbose($"{method.ReturnType.Name} depends on {string.Join(", ", method.GetParameters().Select(x => x.GetType().Name))}");
+            var parameterInfos = method.GetParameters();
+            if (parameterInfos.Length > 0)
+            {
+                _logger.Verbose($"{method.ReturnType.Name} depends on {string.Join(", ", method.GetParameters().Select(x => x.ParameterType.Name))}");
+            }
+            else
+            {
+                _logger.Verbose($"{method.ReturnType.Name} has no dependencies");
+            }
 
             _factories.Add(method.ReturnType, factory);
         }
