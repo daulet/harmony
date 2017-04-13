@@ -1,4 +1,5 @@
-﻿using Harmony.Slow;
+﻿using System;
+using Harmony.Slow;
 
 namespace Harmony.Samples.InjectionUsingHarmony
 {
@@ -15,6 +16,8 @@ namespace Harmony.Samples.InjectionUsingHarmony
                 .Build();
 
             coffeeShop.Maker().Brew();
+
+            Console.ReadKey();
         }
     }
 }
